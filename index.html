@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Marathi Trader</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: #0d0d0d;
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow: hidden;
+}.container { position: relative; z-index: 2; text-align: center; padding-top: 60px; }
+
+.logo { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid #fff; }
+
+h1 { margin-top: 20px; font-size: 32px; letter-spacing: 2px; }
+
+.points { margin-top: 25px; line-height: 1.8; font-size: 18px; }
+
+.points p { margin: 8px 0; }
+
+.join-btn { display: inline-block; margin-top: 30px; padding: 15px 35px; background: red; color: white; font-size: 18px; text-decoration: none; border-radius: 40px; transition: 0.3s ease-in-out; animation: pulse 1.5s infinite; }
+
+.join-btn:hover { background: #ff3333; transform: scale(1.05); }
+
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7); } 70% { box-shadow: 0 0 0 20px rgba(255, 0, 0, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); } }
+
+/* Red Bubble Rain */ .bubble { position: absolute; bottom: -100px; width: 20px; height: 20px; background: rgba(255, 0, 0, 0.6); border-radius: 50%; animation: rise 8s linear infinite; }
+
+@keyframes rise { from { transform: translateY(0); opacity: 1; } to { transform: translateY(-120vh); opacity: 0; } } </style>
+
+</head>
+<body><div class="container">
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1>THE MARATHI TRADER</h1><div class="points">
+    <p>✔ Daily Intraday & Swing Trading Signals</p>
+    <p>✔ Proper Risk Management Strategy</p>
+    <p>✔ Market Analysis & Live Updates</p>
+    <p>✔ Beginner Friendly Guidance</p>
+</div>
+
+<a href="https://t.me/+9L0WtvKZ9ppmZjRl" class="join-btn" target="_blank">
+    JOIN TELEGRAM CHANNEL
+</a>
+
+</div><script>
+function createBubble() {
+    const bubble = document.createElement("div");
+    bubble.classList.add("bubble");
+    bubble.style.left = Math.random() * 100 + "vw";
+    bubble.style.animationDuration = (Math.random() * 5 + 5) + "s";
+    bubble.style.width = bubble.style.height = (Math.random() * 20 + 10) + "px";
+    document.body.appendChild(bubble);
+
+    setTimeout(() => {
+        bubble.remove();
+    }, 8000);
+}
+
+setInterval(createBubble, 300);
+</script></body>
+</html>
